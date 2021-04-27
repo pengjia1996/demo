@@ -1,0 +1,12 @@
+<Hibernate-mapping>
+    <class name="com.pj.orm.Student" table="student" schema="scott" >
+        <id  name="stuId" type="java.lang.Integer">
+            <column name="stuId" precision="11" scale="0" />
+            <generator class="increment"></generator>
+        </id>
+        <property name="stuName"  type="java.lang.String">
+            <column name="stuName" length="20" unique="true" />
+        </property>
+        <!--其它属性映射-->
+    </class>
+</Hibernate-mapping>
