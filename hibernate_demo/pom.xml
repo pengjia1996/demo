@@ -2,24 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!-- 项目编码方式 -->
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.example</groupId>
     <artifactId>hibernate_demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
-        <!-- start 测试相关依赖 -->
-       <!-- <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
-            <scope>test</scope>
-        </dependency>-->
-        <!-- end 测试相关依赖 -->
+        <!--自己的公共类jar包-->
+        <dependency>
+            <groupId>com.xinyu</groupId>
+            <artifactId>util</artifactId>
+            <version>0.0.3-SNAPSHOT</version>
+        </dependency>
+
+        <!--hibernate jar包-->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.3.7.Final</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -59,20 +62,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <!--自定义pom添加-->
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>http://host:port/content/groups/public</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>http://host:port/content/groups/public</url>
-        </pluginRepository>
-    </pluginRepositories>
 
 </project>
